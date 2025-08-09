@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA 2K26 Builder - 专业球员创建工具与社区平台</title>
+    <meta name="description" content="NBA 2K26最专业的MyPLAYER球员创建工具。提供深度数据分析、社区分享、专业攻略。打造你的完美球员！">
+    <meta name="keywords" content="NBA 2K26, MyPLAYER, 球员创建, 游戏攻略, 徽章, 属性, 建模工具">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-basketball-ball"></i>
+                <span>NBA 2K26 Builder</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#builder" class="nav-link">球员创建</a>
+                <a href="#community" class="nav-link">社区</a>
+                <a href="#guides" class="nav-link">攻略</a>
+                <a href="#news" class="nav-link">资讯</a>
+                <button class="btn-premium">高级会员</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">打造你的完美 <span class="highlight">MyPLAYER</span></h1>
+                <p class="hero-subtitle">NBA 2K26最专业的球员创建工具。深度数据分析、社区分享、专业攻略 - 一切尽在掌握</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">开始创建球员</button>
+                    <button class="btn-secondary">浏览热门建模</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">活跃用户</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">分享建模</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">专业攻略</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能区域 -->
+    <section id="builder" class="builder-section">
+        <div class="container">
+            <h2 class="section-title">球员创建工具</h2>
+            <p class="section-subtitle">使用我们的专业工具，创建属于你的完美球员</p>
+            
+            <div class="builder-container">
+                <!-- 左侧控制面板 -->
+                <div class="builder-controls">
+                    <div class="control-group">
+                        <h3>基本信息</h3>
+                        <div class="form-group">
+                            <label>球员姓名</label>
+                            <input type="text" id="playerName" placeholder="输入球员姓名" value="我的球员">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>身高 (cm)</label>
+                                <input type="range" id="height" min="180" max="220" value="200" class="slider">
+                                <span class="value" id="heightValue">200cm</span>
+                            </div>
+                            <div class="form-group">
+                                <label>体重 (kg)</label>
+                                <input type="range" id="weight" min="70" max="150" value="100" class="slider">
+                                <span class="value" id="weightValue">100kg</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>臂展 (cm)</label>
+                            <input type="range" id="wingspan" min="180" max="230" value="210" class="slider">
+                            <span class="value" id="wingspanValue">210cm</span>
+                        </div>
+                        <div class="form-group">
+                            <label>位置</label>
+                            <select id="position">
+                                <option value="PG">控球后卫 (PG)</option>
+                                <option value="SG">得分后卫 (SG)</option>
+                                <option value="SF">小前锋 (SF)</option>
+                                <option value="PF">大前锋 (PF)</option>
+                                <option value="C">中锋 (C)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>属性分配</h3>
+                        <div class="attribute-container">
+                            <div class="attribute-item">
+                                <label>速度</label>
+                                <input type="range" id="speed" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="speedValue">75</span>
+                            </div>
+                            <div class="attribute-item">
+                                <label>敏捷</label>
+                                <input type="range" id="agility" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="agilityValue">75</span>
+                            </div>
+                            <div class="attribute-item">
+                                <label>力量</label>
+                                <input type="range" id="strength" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="strengthValue">75</span>
+                            </div>
+                            <div class="attribute-item">
+                                <label>跳跃</label>
+                                <input type="range" id="vertical" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="verticalValue">75</span>
+                            </div>
+                            <div class="attribute-item">
+                                <label>投篮</label>
+                                <input type="range" id="shooting" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="shootingValue">75</span>
+                            </div>
+                            <div class="attribute-item">
+                                <label>防守</label>
+                                <input type="range" id="defense" min="25" max="99" value="75" class="slider">
+                                <span class="value" id="defenseValue">75</span>
+                            </div>
+                        </div>
+                        <div class="points-remaining">
+                            <span>剩余属性点: <strong id="remainingPoints">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧预览面板 -->
+                <div class="builder-preview">
+                    <div class="player-card">
+                        <div class="player-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="player-info">
+                            <h3 id="previewName">我的球员</h3>
+                            <p class="player-details">
+                                <span id="previewHeight">200cm</span> | 
+                                <span id="previewWeight">100kg</span> | 
+                                <span id="previewPosition">控球后卫</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="stats-preview">
+                        <h4>属性概览</h4>
+                        <div class="stat-bars">
+                            <div class="stat-bar">
+                                <span>速度</span>
+                                <div class="bar">
+                                    <div class="fill" id="speedBar" style="width: 75%"></div>
+                                </div>
+                                <span id="speedPreview">75</span>
+                            </div>
+                            <div class="stat-bar">
+                                <span>投篮</span>
+                                <div class="bar">
+                                    <div class="fill" id="shootingBar" style="width: 75%"></div>
+                                </div>
+                                <span id="shootingPreview">75</span>
+                            </div>
+                            <div class="stat-bar">
+                                <span>防守</span>
+                                <div class="bar">
+                                    <div class="fill" id="defenseBar" style="width: 75%"></div>
+                                </div>
+                                <span id="defensePreview">75</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="badges-preview">
+                        <h4>推荐徽章</h4>
+                        <div class="badge-list">
+                            <span class="badge gold">投篮专家</span>
+                            <span class="badge silver">快速移动</span>
+                            <span class="badge bronze">防守威慑</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-save">保存建模</button>
+                        <button class="btn-share">分享建模</button>
+                        <button class="btn-analyze">性能分析</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区热门建模 -->
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2 class="section-title">社区热门建模</h2>
+            <p class="section-subtitle">发现并学习来自顶级玩家的建模方案</p>
+            
+            <div class="build-grid">
+                <div class="build-card">
+                    <div class="build-header">
+                        <div class="build-avatar">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="build-info">
+                            <h3>雷霆突破手</h3>
+                            <p>by ProGamer2K</p>
+                        </div>
+                        <div class="build-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <div class="build-stats">
+                        <div class="stat-mini">
+                            <span>速度</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>敏捷</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>投篮</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-badges">
+                        <span class="mini-badge">突破专家</span>
+                        <span class="mini-badge">快攻大师</span>
+                    </div>
+                    <div class="build-actions">
+                        <button class="btn-small">查看详情</button>
+                        <button class="btn-small secondary">收藏</button>
+                    </div>
+                </div>
+
+                <div class="build-card">
+                    <div class="build-header">
+                        <div class="build-avatar">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="build-info">
+                            <h3>三分狙击手</h3>
+                            <p>by SharpShooter</p>
+                        </div>
+                        <div class="build-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="build-stats">
+                        <div class="stat-mini">
+                            <span>投篮</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>速度</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>防守</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-badges">
+                        <span class="mini-badge">神射手</span>
+                        <span class="mini-badge">冷血杀手</span>
+                    </div>
+                    <div class="build-actions">
+                        <button class="btn-small">查看详情</button>
+                        <button class="btn-small secondary">收藏</button>
+                    </div>
+                </div>
+
+                <div class="build-card">
+                    <div class="build-header">
+                        <div class="build-avatar">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="build-info">
+                            <h3>钢铁防线</h3>
+                            <p>by DefenseKing</p>
+                        </div>
+                        <div class="build-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="build-stats">
+                        <div class="stat-mini">
+                            <span>防守</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 96%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>力量</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-mini">
+                            <span>篮板</span>
+                            <div class="mini-bar">
+                                <div class="mini-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-badges">
+                        <span class="mini-badge">防守专家</span>
+                        <span class="mini-badge">篮板怪兽</span>
+                    </div>
+                    <div class="build-actions">
+                        <button class="btn-small">查看详情</button>
+                        <button class="btn-small secondary">收藏</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-actions">
+                <button class="btn-primary">查看更多建模</button>
+                <button class="btn-secondary">分享我的建模</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能特色 -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">为什么选择我们？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>深度数据分析</h3>
+                    <p>不仅展示数值，更提供性能预测和实战表现分析，让你的每个决策都基于数据</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>活跃社区</h3>
+                    <p>与全球玩家分享建模，获得专业反馈，学习顶级玩家的策略和技巧</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>实时更新</h3>
+                    <p>紧跟游戏更新，数据和分析实时调整，确保你始终掌握最新的游戏平衡</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>专业攻略</h3>
+                    <p>专业玩家和数据分析师提供独家攻略，助你快速提升游戏技巧</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-basketball-ball"></i>
+                        <span>NBA 2K26 Builder</span>
+                    </div>
+                    <p>专业的NBA 2K26球员创建工具与社区平台。打造你的完美MyPLAYER，与全球玩家分享经验。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>功能</h4>
+                    <ul>
+                        <li><a href="#builder">球员创建工具</a></li>
+                        <li><a href="#community">社区分享</a></li>
+                        <li><a href="#guides">专业攻略</a></li>
+                        <li><a href="#news">游戏资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>社区</h4>
+                    <ul>
+                        <li><a href="#">热门建模</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">讨论区</a></li>
+                        <li><a href="#">用户指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NBA 2K26 Builder. 非官方球迷网站，与2K Sports无关。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
