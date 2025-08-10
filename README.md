@@ -1,4 +1,4 @@
-# NBA 2K26 Builder - 专业球员创建工具与社区平台
+# NBA 2K26 Builder - 专业球员创建工具与社区友好平台。
 
 🏀 **nba2k26builder.xyz** - 为NBA 2K26玩家提供最专业的MyPLAYER球员创建工具和活跃的社区平台。
 
@@ -239,5 +239,6 @@ const playerAttributes = {
 - 开源社区的技术支持
 
 ---
+
 
 **免责声明**：本项目为非官方球迷网站，与2K Sports公司无关。NBA 2K是2K Sports的注册商标。
