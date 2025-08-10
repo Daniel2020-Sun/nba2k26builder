@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.nba2k26builder.xyz/sitemap.xml
