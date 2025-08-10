@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.nba2k26builder.xyz/</loc>
+    <lastmod>2025-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- 以后有新页面时，每个 URL 加一段 <url>...</url> -->
-  <!--
-  <url><loc>https://www.nba2k26builder.xyz/builder.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  -->
 </urlset>
